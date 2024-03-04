@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Virtual Canvas</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            position: relative;
+            width: 400px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        .container img {
+            margin: 0 auto 20px;
+            display: block;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+        }
+        
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .input-group input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        .input-group a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .input-group a:hover {
+            color: #0056b3;
+        }
+        
+        /* Shapes and designs */
+        .shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .shape {
+            position: absolute;
+            opacity: 0.5;
+        }
+        
+        .circle {
+            background-color: #F9A03F;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            top: -75px;
+            left: -75px;
+        }
+        
+        .rectangle {
+            background-color: #58A4B0;
+            width: 200px;
+            height: 100px;
+            transform: rotate(-30deg);
+            top: 50px;
+            left: -100px;
+        }
+        
+        .hexagon {
+            width: 100px;
+            height: 100px;
+            background-color: #E63946;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transform: rotate(60deg);
+            top: 200px;
+            left: 50px;
+        }
+        
+    
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #4CAF50;
+            top: 100px;
+            left: 200px;
+        }
+        
+        .pentagon {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #2196F3;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            top: 300px;
+            left: 200px;
+        }
+        
+        .star {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #FFD700;
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            transform: rotate(35deg);
+        }
+        
+        .heart {
+            position: absolute;
+            top: 150px;
+            left: 250px;
+            width: 100px;
+            height: 90px;
+            background: #DC143C;
+            transform: rotate(45deg);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        
+        .oval {
+            position: absolute;
+            width: 150px;
+            height: 100px;
+            background-color: #FF5722;
+            border-radius: 50%;
+            top: 350px;
+            left: 100px;
+        }
+        
+        .rhombus {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #FF9800;
+            transform: rotate(45deg);
+            top: 400px;
+            left: 300px;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="IMG_1924.PNG" alt="Logo">
+        <h2>Sign Up</h2>
+        <form action="#">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <button  type="submit" class="btn"><a href="login.html">Sign Up</a></button>
+            </div>
+            <div class="input-group">
+                <a href="login.html">Already have an account? Login</a>
+            </div>
+            
+        </form>
+    </div>
+    <div class="shapes">
+        <div class="shape circle"></div>
+        <div class="shape rectangle"></div>
+        <div class="shape hexagon"></div>
+        <div class="shape triangle"></div>
+        <div class="shape pentagon"></div>
+        <div class="shape star"></div>
+        <div class="shape heart"></div>
+        <div class="shape oval"></div>
+        <div class="shape rhombus"></div>
+    </div>
+</body>
+</html>
+

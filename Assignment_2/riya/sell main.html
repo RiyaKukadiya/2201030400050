@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Virtual Canvas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-HxuJO2QR7iGm1Hq4KaiR6yewCpGOnj4uT5Pz6h3o+3p6Q4F/UV5XV1EweyOoDJx+" crossorigin="anonymous">
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        header {
+            background-color: #232f3e;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #3e4a59;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #232f3e;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            align-items: center;
+        }
+
+        footer a:hover {
+            color: #ff9900;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #ffffff;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff9900;
+        }
+
+        .painting-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .painting {
+            flex: 0 0 calc(33.33% - 40px);
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .painting img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .painting h3 {
+            margin-top: 10px;
+        }
+
+        .painting p {
+            margin-top: 10px;
+            color: #666666;
+        }
+
+        .painting button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #232f3e;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .painting button:hover {
+            background-color: #1c2938;
+        }
+
+        .enlarged {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Virtual Canvas</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home page.html">Home</a></li>
+            <li><a href="sell.html">Shop</a></li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="painting-container">
+        <div class="painting">
+            <img src="licensed-image.jpeg" alt="Beautiful Landscape Painting">
+            <h3>Mona Lisa</h3>
+            <p>Artist: Leonardo Da Vinci</p>
+            <p>Description: The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci.</p>
+            <p>Price: $1000000000</p>
+            <button  onclick="payment('painting1')"><a  href="payment.html">Payment</a></button>
+        </div>
+
+        
+    </div>
+
+    <footer>
+        <div>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Copyright © 2024 Virtual Canvas. All rights reserved.</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function payment(paintingId) {
+           
+            alert('Payment process for ' + paintingId);
+        }
+    </script>
+</body>
+</html>
